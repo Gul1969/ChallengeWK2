@@ -1,0 +1,5 @@
+sudo docker build -t db .
+sudo docker build -t flask-app .
+sudo docker network create db
+sudo docker run docker run -d -p 5001:5000 --network db --name flask-app flask-app
+sudo docker run docker run-d -p 3306:3306 --network db --name mysql -e MYSQL_ROOT_PASSWORD=PASS
